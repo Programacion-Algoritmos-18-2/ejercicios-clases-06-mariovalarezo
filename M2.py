@@ -1,6 +1,6 @@
 import abc
 
-
+#Superclase
 class PersonaEquipo(metaclass=abc.ABCMeta):
     __metaclass__ = abc.ABCMeta
     def __init__(self, nom):
@@ -14,7 +14,7 @@ class PersonaEquipo(metaclass=abc.ABCMeta):
     @abc.abstractmethod
     def entrenar(self):
         pass
-
+#Clase Hija que herada de la clase padre Persona equipo
 class Futbolista(PersonaEquipo):
     def __init__(self, n):
         super(Futbolista, self).__init__(n)
@@ -27,7 +27,7 @@ class Futbolista(PersonaEquipo):
 
     def entrenar(self):
         print("Yo " +self.nombre +", futbolista, hago practica en el entrenamiento")
-
+#Clase Hija que herada de la clase padre Persona equipo
 class Entrenador(PersonaEquipo):
     def __init__(self, n):
         super(Entrenador, self).__init__(n)
@@ -39,7 +39,7 @@ class Entrenador(PersonaEquipo):
         return self.cargo_entrenador
     def entrenar(self):
         print("Yo " +self.nombre +", entrenador, soy el director del entrenamiento")
-
+#Clase Hija que herada de la clase padre Persona equipo
 class Medico_Equipo(PersonaEquipo):
     def __init__(self, n):
         super(Medico_Equipo, self).__init__(n)
@@ -48,7 +48,7 @@ class Medico_Equipo(PersonaEquipo):
     def entrenar(self):
         print("Yo " +self.nombre +", medico, atiendo a los jugadores  en el entrenamiento")
 
-
+#Clase Hija que herada de la clase padre Persona equipo
 class Presidente_Equipo(PersonaEquipo):
     def __init__(self, n):
         super(Presidente_Equipo, self).__init__(n)
@@ -58,7 +58,7 @@ class Presidente_Equipo(PersonaEquipo):
         print("Yo " +self.nombre +", presidente, pongo el dinero en el entrenamiento")
 
 
-
+#Run
 f= Futbolista("Antonio")
 e=Entrenador("Jose")
 m=Medico_Equipo("Ramon")
